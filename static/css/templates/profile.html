@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - University System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="text-center mb-4">My Profile</h2>
+        <form method="POST" action="{{ url_for('profile') }}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" name="name" class="form-control" id="name" value="{{ user.name }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="email" value="{{ user.email }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">New Password (optional)</label>
+                <input type="password" name="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Update Profile</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

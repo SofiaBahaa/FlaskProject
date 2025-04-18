@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home - University System{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Welcome to the University System</h1>
+    <p class="lead">Manage your academic life easily and efficiently.</p>
+    <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>
+    <a href="{{ url_for('register') }}" class="btn btn-outline-primary">Register</a>
+</div>
+{% endblock %}
